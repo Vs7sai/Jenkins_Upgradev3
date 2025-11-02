@@ -4,6 +4,7 @@ pipeline {
     environment {
         // Define environment variables here
         MY_ENV_VAR = 'Custom Value'
+        build_no= "${env.BUILD_NUMBER}"
     }
 
     stages {
