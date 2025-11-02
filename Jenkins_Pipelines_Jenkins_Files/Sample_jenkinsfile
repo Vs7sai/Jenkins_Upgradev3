@@ -22,7 +22,7 @@ pipeline {
                 }
             }
         }
-
+ parallel{
         stage('Build') {
             steps {
                 // Build your application here (e.g., compile, package, etc.)
@@ -39,8 +39,14 @@ pipeline {
                 sh 'echo "In Test Step"'
             }
         }
+}
 
         stage('Deploy') {
+           input {
+                    message "Do you want to deploy?"
+                    ok "Proceed with Deploy"
+                }
+
             steps {
                 // Deploy your application to a target environment (e.g., staging, production)
                 sh 'echo "Value of ENV Varaible is "$MY_ENV_VAR""'
