@@ -22,7 +22,7 @@ pipeline {
                 }
             }
         }
-stage (building multiple parrel builds){
+stage ('building multiple parrel builds'){
   parallel {
         stage('Build') {
             steps {
