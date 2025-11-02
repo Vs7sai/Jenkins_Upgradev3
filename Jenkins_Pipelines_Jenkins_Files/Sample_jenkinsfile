@@ -22,7 +22,8 @@ pipeline {
                 }
             }
         }
- parallel {
+stage {building multiple parrel builds){
+  parallel {
         stage('Build') {
             steps {
                 // Build your application here (e.g., compile, package, etc.)
@@ -39,6 +40,7 @@ pipeline {
                 sh 'echo "In Test Step"'
             }
         }
+}
 }
 
         stage('Deploy') {
