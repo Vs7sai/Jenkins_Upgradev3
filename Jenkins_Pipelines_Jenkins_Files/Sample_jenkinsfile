@@ -52,6 +52,7 @@ pipeline {
         success {
             // Actions to perform when the pipeline succeeds
             echo 'Pipeline succeeded!'
+            echo "Build Number: ${env.BUILD_NUMBER}"
         }
         failure {
             // Actions to perform when the pipeline fails
