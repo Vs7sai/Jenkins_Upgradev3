@@ -45,7 +45,7 @@ stage ('building multiple parrel builds'){
 
         stage('Deploy') {
            input {
-                    message "Do you want to deploy?"
+                    message "Do you want to deploy? buddy if yes presst the buttion "
                     ok "Proceed with Deploy"
                 }
 
