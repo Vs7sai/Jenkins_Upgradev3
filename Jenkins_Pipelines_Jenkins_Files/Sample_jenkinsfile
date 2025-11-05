@@ -1,5 +1,5 @@
 pipeline {
-    agent agent
+    agent { label 'agent' }
 
     environment {
         // Define environment variables here
